@@ -17,7 +17,7 @@ public  class StringQ{
         }
         return reverse;
 
-        System.out.println(reverse.equals(name)?"palimdrome":"not palimdrome");
+        //System.out.println(reverse.equals(name)?"palimdrome":"not palimdrome");
     }
 
     public static void reverseWord(){
@@ -91,22 +91,7 @@ public  class StringQ{
 
 
 
-  public static void Kthelement(){
-        int arr[] = {9,6,5,7,8};
-        Scanner in = new Scanner(System.in);
-        System.out.println("Enter a number");
-        int l = 0;
-        int k = in.nextInt()-1;
-        Arrays.sort(arr);
-        System.out.println("the kth smallest element is "+ arr[l+k]);
-
-        printA(arr);
-
-
-      
-
-
-  }
+  
 
 
 
