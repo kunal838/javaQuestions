@@ -3,7 +3,7 @@ class App{
     
    public static void main(String[] args)
     {
-        problems.positivenegetiveseparate(); 
+       ArrayQ1.mergesortedarray();
      
        
 }

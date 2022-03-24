@@ -105,7 +105,9 @@ public class ArrayQ1 {
          
         }
 
-        printA(arr);
+        for(int m=0;m<arr.length;m++){
+            System.out.print(arr[m] + " ");
+        }
         
 
     }
@@ -152,6 +154,33 @@ public class ArrayQ1 {
         in.close();
     }
 
+    //pattern 1,2,1,3,2,5,3,7,5,11,8,13,13,17.....
+    public static void upperpattern(){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter a number");
+        int n = in.nextInt(); 
+        int a[] =new int[n];
+        for(int i = 0;i<n;i++){
+            
+            if(i%2==0){
+                // logic to print even numbers
+                a[i]=90;
+            }
+            else if(i == 1 || i == 3 ){
+                a[i]=1;
+            }
+            else{
+                a[i]=a[i-2]+a[i-4];
+            }
+
+        }
+        for(int j=1;j<n;j++){
+            System.out.print(a[j]+" ");
+        }
+        in.close();
+    }
+
+
 
     public static void Kthelement(){
         int arr[] = {9,6,5,7,8};
@@ -167,6 +196,29 @@ public class ArrayQ1 {
 
       
 
+
+  }
+
+  //merge two sorted array
+  //space complexity o(1)
+  //time complexsity o(n1*m1)
+  public static void mergesortedarray(){
+      int a[] = {1,4,6,8,10};
+      int b[] = {2,9,11};
+        int j=0;
+        int temp;
+        for(int i=0;i<a.length;i++){
+            if(a[i]>b[j]){
+                temp=a[i];
+                a[i]=b[j];
+                b[j]=temp;
+
+                Arrays.sort(b);
+            }
+        }
+        System.out.println(" hence the merged sorted array is");
+        printA(a);
+        printA(b);
 
   }
 
